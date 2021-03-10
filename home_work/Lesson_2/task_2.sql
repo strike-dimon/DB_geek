@@ -19,16 +19,19 @@ SWOW TABLES;
  * Создайте дамп базы данных example из предыдущего задания,
  разверните содержимое дампа в новую базу данных sample.
 */
--- дамп в example.txt файле
+mysqldump example > example.sql
+-- дамп в example.sql файле
 -- разворачивание дампа в новую БД
 -- открываем cmd
 -- запускаем mysql
 -- создаем новую БД, например sample c помощью команды:
 CREATE DATABASE sample;
 -- вывод в консоле об успешном создании новой базы данных
+-- проверяем что БД пустая
+SWOW TABLES;
 EXIT
 -- далее разворачиваем в новую БД
-mysql sample < example.txt(sql)
+mysql sample < example.sql
 -- проверка загрузки дампа
 -- входим в mysql
 USE sample;
@@ -38,6 +41,6 @@ SHOW TABLES;
  * Создайте дамп единственной таблицы help_keyword базы данных mysql.
  Причем добейтесь того, чтобы дамп содержал только первые 100 строк таблицы.
 */
-mysqldump --opt --where="help_keyword_id <= 100" mysql help_keyword > help_keyword_dump2.sql
+mysqldump --opt --where="help_keyword_id <= 99" mysql help_keyword > help_keyword_dump2.sql
 
 -- файл дампа в коммите
