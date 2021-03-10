@@ -31,7 +31,7 @@ CREATE DATABASE sample;
 SWOW TABLES;
 EXIT
 -- далее разворачиваем в новую БД
-mysql sample < example.sql
+mysqldump sample < example.sql
 -- проверка загрузки дампа
 -- входим в mysql
 USE sample;
