@@ -1,1 +1,3 @@
-# DB_geek
+# DB_geekbrains
+
+Курсы по основам БД
